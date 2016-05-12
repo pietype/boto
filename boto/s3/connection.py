@@ -175,7 +175,7 @@ class S3Connection(AWSAuthConnection):
                  validate_certs=None, profile_name=None):
         no_host_provided = False
         if host is NoHostProvided:
-            no_host_provided = True
+            # no_host_provided = True
             host = self.DefaultHost
         if isinstance(calling_format, six.string_types):
             calling_format=boto.utils.find_class(calling_format)()
